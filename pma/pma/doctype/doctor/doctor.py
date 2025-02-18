@@ -19,6 +19,11 @@ class Doctor(WebsiteGenerator):
 		while frappe.db.exists("Doctor", self.name):
 			random_str = ''.join(random.choices(string.ascii_lowercase + string.digits, k=4))
 			self.name = f"{doc_name}-{random_str}"
+		self.route = f"doctor/{self.name}"
+		self.title = self.doctor_name
+	def before_save(self):
+		# Ensure title is always set to doctor_name
+		self.title = self.doctor_name
 
 	# def get_list_context(self, context):
 	# 	context.no_cache = 1# Disable list view completely
@@ -29,6 +34,7 @@ class Doctor(WebsiteGenerator):
         # condition_field="published",
         # page_title_field="doctor_name",
 	)
+	
   
 
 
