@@ -1,0 +1,100 @@
+{
+ "actions": [],
+ "allow_guest_to_view": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "creation": "2025-02-18 15:17:05.879848",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "doctor_details_section",
+  "doctor_name",
+  "email",
+  "doctor_photo",
+  "column_break_nhaj",
+  "qualification",
+  "phone",
+  "route",
+  "published"
+ ],
+ "fields": [
+  {
+   "fieldname": "doctor_name",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "doctor_photo",
+   "fieldtype": "Attach Image",
+   "label": "Doctor Photo"
+  },
+  {
+   "fieldname": "column_break_nhaj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "qualification",
+   "fieldtype": "Select",
+   "label": "Qualification",
+   "options": "MBBS\nBHMS\nBUMS\nBAMS"
+  },
+  {
+   "fieldname": "doctor_details_section",
+   "fieldtype": "Section Break",
+   "label": "Doctor Details"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Route"
+  },
+  {
+   "default": "1",
+   "fieldname": "published",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Published"
+  }
+ ],
+ "has_web_view": 1,
+ "is_published_field": "published",
+ "links": [],
+ "modified": "2025-02-18 16:41:42.625398",
+ "modified_by": "Administrator",
+ "module": "PMA",
+ "name": "Doctor",
+ "naming_rule": "By script",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "route": "doctor",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "doctor_name"
+}

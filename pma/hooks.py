@@ -245,3 +245,6 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+website_redirects = [
+    {"source": "/doctor", "target": "/404"}  # Redirects /doctors to home page
+]
