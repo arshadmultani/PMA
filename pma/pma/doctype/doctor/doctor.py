@@ -6,8 +6,6 @@ from frappe.website.website_generator import WebsiteGenerator
 import random
 import string
 
-
-
 class Doctor(WebsiteGenerator):
 	
 	def autoname(self):
@@ -19,6 +17,7 @@ class Doctor(WebsiteGenerator):
 		while frappe.db.exists("Doctor", self.name):
 			random_str = ''.join(random.choices(string.ascii_lowercase + string.digits, k=4))
 			self.name = f"{doc_name}-{random_str}"
+		
 		self.route = f"doctor/{self.name}"
 		self.title = self.doctor_name
 	def before_save(self):
