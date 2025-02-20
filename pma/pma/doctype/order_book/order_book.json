@@ -1,0 +1,82 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:OBN-{####}",
+ "creation": "2025-02-20 13:09:49.004133",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "customer_type",
+  "column_break_bwjz",
+  "customer_name",
+  "order_section",
+  "products",
+  "section_break_ndma",
+  "total_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer_type",
+   "fieldtype": "Select",
+   "label": "Customer Type",
+   "options": "Doctor\nChemist"
+  },
+  {
+   "fieldname": "column_break_bwjz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Link",
+   "label": "Customer Name",
+   "options": "Doctor"
+  },
+  {
+   "fieldname": "order_section",
+   "fieldtype": "Section Break",
+   "label": "Order"
+  },
+  {
+   "fieldname": "section_break_ndma",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "products",
+   "fieldtype": "Table",
+   "label": "Product(s)",
+   "options": "Order Book Item"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-20 20:17:15.316544",
+ "modified_by": "Administrator",
+ "module": "PMA",
+ "name": "Order Book",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

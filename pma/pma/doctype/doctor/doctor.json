@@ -15,7 +15,9 @@
   "qualification",
   "phone",
   "route",
-  "published"
+  "published",
+  "section_break_chum",
+  "products"
  ],
  "fields": [
   {
@@ -67,12 +69,22 @@
    "fieldtype": "Check",
    "hidden": 1,
    "label": "Published"
+  },
+  {
+   "fieldname": "section_break_chum",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "products",
+   "fieldtype": "Table",
+   "label": "Products",
+   "options": "Order Book Item"
   }
  ],
  "has_web_view": 1,
  "is_published_field": "published",
  "links": [],
- "modified": "2025-02-19 18:06:04.265239",
+ "modified": "2025-02-20 18:49:51.993033",
  "modified_by": "Administrator",
  "module": "PMA",
  "name": "Doctor",
@@ -93,6 +105,7 @@
   }
  ],
  "route": "doctor",
+ "show_title_field_in_link": 1,
  "sort_field": "creation",
  "sort_order": "DESC",
  "states": [],
