@@ -9,34 +9,15 @@ frappe.ui.form.on("Order Book", {
 		calculate_total_amount(frm);
 		console.log("refresh event");
 	},
-	customer_type: function (frm) {
-		// Clear the customer_name field when customer_type changes
-		frm.set_value("customer_name", "");
 
-		// Change the customer_name field properties based on customer_type
-		frm.set_df_property(
-			"customer_name",
-			"options",
-			frm.doc.customer_type === "Doctor" ? "Doctor" : "Chemist"
-		);
-
-		// Refresh the field to show new options
-		frm.refresh_field("customer_name");
-	},
-	validate: function (frm) {
-		// Calculate total amount
-		let total = 0;
-		frm.doc.products.forEach(function (item) {
-			total += item.amount;
-		});
-		frm.set_value("total_amount", total);
-	},
-	products_remove: function (frm) {
-		// Use a small delay to allow the row removal to complete
-		setTimeout(function () {
-			calculate_total_amount(frm);
-		}, 100);
-	},
+	// validate: function (frm) {
+	// 	// Calculate total amount
+	// 	let total = 0;
+	// 	frm.doc.products.forEach(function (item) {
+	// 		total += item.amount;
+	// 	});
+	// 	frm.set_value("total_amount", total);
+	// },
 });
 
 frappe.ui.form.on("Order Book Item", {
@@ -64,6 +45,9 @@ frappe.ui.form.on("Order Book Item", {
 		calculate_total_amount(frm);
 	},
 	products_remove: function (frm, cdt, cdn) {
+		calculate_total_amount(frm);
+	},
+	products_add: function (frm, cdt, cdn) {
 		calculate_total_amount(frm);
 	},
 });

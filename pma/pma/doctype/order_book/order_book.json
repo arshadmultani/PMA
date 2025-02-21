@@ -11,15 +11,19 @@
   "customer_name",
   "order_section",
   "products",
+  "total_amount",
   "section_break_ndma",
-  "total_amount"
+  "supply_from",
+  "supply_address"
  ],
  "fields": [
   {
    "fieldname": "customer_type",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Customer Type",
-   "options": "Doctor\nChemist"
+   "options": "Doctor\nChemist",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_bwjz",
@@ -27,9 +31,11 @@
   },
   {
    "fieldname": "customer_name",
-   "fieldtype": "Link",
+   "fieldtype": "Dynamic Link",
+   "in_list_view": 1,
    "label": "Customer Name",
-   "options": "Doctor"
+   "options": "customer_type",
+   "reqd": 1
   },
   {
    "fieldname": "order_section",
@@ -51,12 +57,28 @@
    "fieldname": "products",
    "fieldtype": "Table",
    "label": "Product(s)",
-   "options": "Order Book Item"
+   "options": "Order Book Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "supply_from",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Supply From",
+   "options": "Stockist",
+   "reqd": 1
+  },
+  {
+   "fieldname": "supply_address",
+   "fieldtype": "Data",
+   "is_virtual": 1,
+   "label": "Supply Address",
+   "options": "f\"{doc.supply_from.address}\""
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-02-20 20:17:15.316544",
+ "modified": "2025-02-21 11:20:24.289266",
  "modified_by": "Administrator",
  "module": "PMA",
  "name": "Order Book",
