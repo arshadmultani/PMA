@@ -18,6 +18,19 @@ frappe.ui.form.on("Order Book", {
 	// 	});
 	// 	frm.set_value("total_amount", total);
 	// },
+	validate: function (frm) {
+		// Check if the child table exists and has at least one row
+		if (!frm.doc.products || frm.doc.products.length === 0) {
+			frappe.throw(__("Please add at least one product."));
+		}
+
+		// Loop through each row to ensure the product field is populated
+		frm.doc.products.forEach(function (row, index) {
+			if (!row.product) {
+				frappe.throw(__("Please select a product for row #{0}.", [index + 1]));
+			}
+		});
+	},
 });
 
 frappe.ui.form.on("Order Book Item", {

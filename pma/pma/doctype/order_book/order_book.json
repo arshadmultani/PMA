@@ -14,7 +14,9 @@
   "total_amount",
   "section_break_ndma",
   "supply_from",
-  "supply_address"
+  "column_break_foel",
+  "supply_address",
+  "supply_headquarter"
  ],
  "fields": [
   {
@@ -44,7 +46,8 @@
   },
   {
    "fieldname": "section_break_ndma",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "Supplier"
   },
   {
    "fieldname": "total_amount",
@@ -64,21 +67,32 @@
    "fieldname": "supply_from",
    "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Supply From",
+   "label": "Supplier Name",
    "options": "Stockist",
    "reqd": 1
   },
   {
+   "fetch_from": "supply_from.address",
    "fieldname": "supply_address",
    "fieldtype": "Data",
    "is_virtual": 1,
-   "label": "Supply Address",
-   "options": "f\"{doc.supply_from.address}\""
+   "label": "Supplier Address"
+  },
+  {
+   "fieldname": "column_break_foel",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "supply_from.headquarter",
+   "fieldname": "supply_headquarter",
+   "fieldtype": "Data",
+   "is_virtual": 1,
+   "label": "Headquarter"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-02-21 11:20:24.289266",
+ "modified": "2025-02-21 12:32:48.455930",
  "modified_by": "Administrator",
  "module": "PMA",
  "name": "Order Book",
