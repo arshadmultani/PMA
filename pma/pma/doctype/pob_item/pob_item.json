@@ -45,7 +45,7 @@
  "modified": "2025-02-20 18:01:50.107768",
  "modified_by": "Administrator",
  "module": "PMA",
- "name": "Order Book Item",
+ "name": "POB Item",
  "owner": "Administrator",
  "permissions": [],
  "sort_field": "creation",

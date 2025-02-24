@@ -1,7 +1,7 @@
 // Copyright (c) 2025, Exponit and contributors
 // For license information, please see license.txt
 
-frappe.ui.form.on("Order Book", {
+frappe.ui.form.on("POB", {
 	refresh(frm) {
 		if (!frm.doc.customer_type) {
 			frm.set_value("customer_type", "Doctor");
@@ -33,7 +33,7 @@ frappe.ui.form.on("Order Book", {
 	},
 });
 
-frappe.ui.form.on("Order Book Item", {
+frappe.ui.form.on("POB Item", {
 	quantity: function (frm, cdt, cdn) {
 		let row = locals[cdt][cdn];
 		if (!row.quantity || row.quantity < 1) {

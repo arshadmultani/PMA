@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class OrderBookItem(Document):
+class POB(Document):
 	pass

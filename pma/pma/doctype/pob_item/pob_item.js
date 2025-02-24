@@ -1,4 +1,4 @@
-// frappe.ui.form.on("Order Book Item", {
+// frappe.ui.form.on("POB Item", {
 // 	quantity: function (frm, cdt, cdn) {
 // 		let row = locals[cdt][cdn];
 // 		// Calculate amount: price * quantity

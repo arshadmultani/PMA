@@ -12,18 +12,18 @@ EXTRA_TEST_RECORD_DEPENDENCIES = []  # eg. ["User"]
 IGNORE_TEST_RECORD_DEPENDENCIES = []  # eg. ["User"]
 
 
-class UnitTestOrderBook(UnitTestCase):
+class UnitTestPOB(UnitTestCase):
 	"""
-	Unit tests for OrderBook.
+	Unit tests for POB.
 	Use this class for testing individual functions and methods.
 	"""
 
 	pass
 
 
-class IntegrationTestOrderBook(IntegrationTestCase):
+class IntegrationTestPOB(IntegrationTestCase):
 	"""
-	Integration tests for OrderBook.
+	Integration tests for POB.
 	Use this class for testing interactions between multiple components.
 	"""
 

@@ -60,7 +60,7 @@
    "fieldname": "products",
    "fieldtype": "Table",
    "label": "Product(s)",
-   "options": "Order Book Item",
+   "options": "POB Item",
    "reqd": 1
   },
   {
@@ -92,10 +92,10 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-02-21 12:32:48.455930",
+ "modified": "2025-02-24 13:28:27.626470",
  "modified_by": "Administrator",
  "module": "PMA",
- "name": "Order Book",
+ "name": "POB",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
