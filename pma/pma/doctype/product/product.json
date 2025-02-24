@@ -42,14 +42,14 @@
   },
   {
    "fieldname": "division",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Product Division",
-   "options": "Pharma\nPhytonova"
+   "options": "Division"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-02-20 13:13:57.402510",
+ "modified": "2025-02-24 14:56:03.428194",
  "modified_by": "Administrator",
  "module": "PMA",
  "name": "Product",
