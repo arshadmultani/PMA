@@ -16,7 +16,9 @@
   "supply_from",
   "column_break_foel",
   "supply_address",
-  "supply_headquarter"
+  "supply_headquarter",
+  "invoice_details_section",
+  "invoice_image"
  ],
  "fields": [
   {
@@ -88,11 +90,22 @@
    "fieldtype": "Data",
    "is_virtual": 1,
    "label": "Headquarter"
+  },
+  {
+   "fieldname": "invoice_details_section",
+   "fieldtype": "Section Break",
+   "label": "Invoice Details"
+  },
+  {
+   "fieldname": "invoice_image",
+   "fieldtype": "Attach Image",
+   "label": "Invoice (Max:3 images)"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-02-24 13:28:27.626470",
+ "max_attachments": 3,
+ "modified": "2025-02-24 18:56:05.412766",
  "modified_by": "Administrator",
  "module": "PMA",
  "name": "POB",

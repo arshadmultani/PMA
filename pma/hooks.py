@@ -248,3 +248,4 @@ app_license = "mit"
 website_redirects = [
     {"source": "/doctor", "target": "/404"}  # Redirects /doctors to home page
 ]
+fixtures = ["Custom Field"]
