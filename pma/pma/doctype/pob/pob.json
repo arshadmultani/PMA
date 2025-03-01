@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:OBN-{####}",
+ "autoname": "format:POB-{####}",
  "creation": "2025-02-20 13:09:49.004133",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -18,7 +18,8 @@
   "supply_address",
   "supply_headquarter",
   "invoice_details_section",
-  "invoice_image"
+  "invoice_image",
+  "amended_from"
  ],
  "fields": [
   {
@@ -59,11 +60,13 @@
    "read_only": 1
   },
   {
+   "columns": 2,
    "fieldname": "products",
    "fieldtype": "Table",
    "label": "Product(s)",
    "options": "POB Item",
-   "reqd": 1
+   "reqd": 1,
+   "width": "250px"
   },
   {
    "fieldname": "supply_from",
@@ -97,15 +100,30 @@
    "label": "Invoice Details"
   },
   {
+   "depends_on": "eval:doc.customer_type == 'Doctor'",
+   "description": "Max 3 Invoices allowed",
    "fieldname": "invoice_image",
    "fieldtype": "Attach Image",
-   "label": "Invoice (Max:3 images)"
+   "label": "Invoice"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "POB",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
+ "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
+ "make_attachments_public": 1,
  "max_attachments": 3,
- "modified": "2025-02-24 18:56:05.412766",
+ "modified": "2025-02-25 20:24:20.125035",
  "modified_by": "Administrator",
  "module": "PMA",
  "name": "POB",
