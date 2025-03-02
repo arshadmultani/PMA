@@ -15,6 +15,7 @@
   {
    "fieldname": "product",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Product",
    "options": "Product"
   },
@@ -22,6 +23,7 @@
    "default": "1",
    "fieldname": "quantity",
    "fieldtype": "Int",
+   "in_list_view": 1,
    "label": "Quantity",
    "non_negative": 1
   },
@@ -29,12 +31,14 @@
    "fetch_from": "product.price",
    "fieldname": "price",
    "fieldtype": "Currency",
+   "in_list_view": 1,
    "label": "Price",
    "read_only": 1
   },
   {
    "fieldname": "amount",
    "fieldtype": "Currency",
+   "in_list_view": 1,
    "label": "Amount",
    "read_only": 1
   }
@@ -42,7 +46,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-02-20 18:01:50.107768",
+ "modified": "2025-03-02 17:59:47.274942",
  "modified_by": "Administrator",
  "module": "PMA",
  "name": "POB Item",
