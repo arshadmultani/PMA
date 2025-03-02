@@ -249,3 +249,7 @@ website_redirects = [
     {"source": "/doctor", "target": "/404"}  # Redirects /doctors to home page
 ]
 fixtures = ["Custom Field"]
+
+website_route_rules = [
+    {"from_route": "/me", "to_route": "/app"},
+]

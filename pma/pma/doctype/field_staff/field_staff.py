@@ -7,7 +7,6 @@
 
 # class FieldStaff(Document):
 # 	pass
-
 import frappe
 import random
 import string
@@ -63,7 +62,34 @@ class FieldStaff(Document):
             subject="Your Account Credentials",
             message=f"Your username is: {self.staff_phone}\n Password is your PAN number in capital letters\n"
         )
-    
+    def set_user_preferences(self, user_name):
+        # """Set user preferences to hide various UI elements"""
+        # Hide search box
+        frappe.db.set_value("User", user_name, "hide_global_search", 1)
+        
+        # These preferences are stored in the __user_settings table
+        # Hide sidebar
+        frappe.db.set_value("User", user_name, "desk_theme", "Hide Sidebar")
+        
+        # Set additional user preferences using the add_user_setting method
+        from frappe.core.doctype.user.user import add_user_setting
+        
+        # Hide timeline in forms
+        add_user_setting('Form', {'timeline_hidden': 1}, user_name)
+        
+        # Hide bulk actions
+        add_user_setting('System', {'show_bulk_actions': 0}, user_name)
+        
+        # Hide sidebar (additional setting)
+        add_user_setting('System', {'hide_sidebar': 1}, user_name)
+        
+        # Optional: You can also restrict modules if needed
+        # user_doc = frappe.get_doc("User", user_name)
+        # allowed_modules = ["Sales"]  # Add only modules you want them to access
+        # for module in user_doc.get("block_modules", []):
+        #     if module.module not in allowed_modules:
+        #         module.block = 1
+        # user_doc.save(ignore_permissions=True)
     # def generate_random_password(self, length=5):
     #     # """Generate a random password of specified length"""
     #     characters = string.ascii_letters + string.digits 
