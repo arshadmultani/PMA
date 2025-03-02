@@ -17,6 +17,7 @@
   "column_break_foel",
   "supply_address",
   "supply_headquarter",
+  "invoice_tab",
   "invoice_details_section",
   "invoice_image",
   "amended_from"
@@ -95,6 +96,7 @@
    "label": "Headquarter"
   },
   {
+   "depends_on": "eval:doc.worklow_state!='New POB';",
    "fieldname": "invoice_details_section",
    "fieldtype": "Section Break",
    "label": "Invoice Details"
@@ -115,6 +117,11 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "invoice_tab",
+   "fieldtype": "Tab Break",
+   "label": "Invoice"
   }
  ],
  "hide_toolbar": 1,
@@ -123,7 +130,7 @@
  "links": [],
  "make_attachments_public": 1,
  "max_attachments": 3,
- "modified": "2025-02-25 20:24:20.125035",
+ "modified": "2025-03-02 18:07:03.985471",
  "modified_by": "Administrator",
  "module": "PMA",
  "name": "POB",
