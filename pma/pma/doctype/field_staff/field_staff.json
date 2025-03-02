@@ -1,0 +1,136 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-03-02 06:14:05.595143",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_sjyy",
+  "staff_name",
+  "staff_email",
+  "column_break_blgc",
+  "staff_phone",
+  "staff_pan",
+  "section_break_eypd",
+  "staff_division",
+  "column_break_uimi",
+  "staff_designation",
+  "user",
+  "field_section",
+  "staff_region",
+  "staff_area",
+  "staff_headquarter"
+ ],
+ "fields": [
+  {
+   "fieldname": "staff_name",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "column_break_blgc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "staff_division",
+   "fieldtype": "Link",
+   "label": "Division",
+   "options": "Division"
+  },
+  {
+   "fieldname": "staff_designation",
+   "fieldtype": "Link",
+   "label": "Designation",
+   "options": "Designation"
+  },
+  {
+   "depends_on": "eval:doc.staff_designation=='DSA';",
+   "fieldname": "staff_headquarter",
+   "fieldtype": "Link",
+   "label": "HQ",
+   "options": "Headquarter"
+  },
+  {
+   "depends_on": "eval:doc.staff_designation=='RSM';",
+   "fieldname": "staff_region",
+   "fieldtype": "Link",
+   "label": "Region",
+   "options": "Region"
+  },
+  {
+   "depends_on": "eval:doc.staff_designation=='ASM';",
+   "fieldname": "staff_area",
+   "fieldtype": "Link",
+   "label": "Area",
+   "options": "Area"
+  },
+  {
+   "fieldname": "column_break_uimi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.staff_designation!='';",
+   "fieldname": "field_section",
+   "fieldtype": "Section Break",
+   "label": "Field"
+  },
+  {
+   "fieldname": "section_break_sjyy",
+   "fieldtype": "Section Break",
+   "label": "Staff Details"
+  },
+  {
+   "fieldname": "staff_email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "section_break_eypd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "staff_phone",
+   "fieldtype": "Data",
+   "label": "Phone",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "User",
+   "options": "User"
+  },
+  {
+   "fieldname": "staff_pan",
+   "fieldtype": "Data",
+   "label": "PAN"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-03-02 11:39:54.115654",
+ "modified_by": "Administrator",
+ "module": "PMA",
+ "name": "Field Staff",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
