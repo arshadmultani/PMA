@@ -1,0 +1,87 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{campaign_name}-{start_date}-{end_date}",
+ "creation": "2025-04-13 14:36:30.927446",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "campaign_name",
+  "start_date",
+  "customer_type",
+  "column_break_nuxx",
+  "campaign_type",
+  "end_date",
+  "section_break_gyno",
+  "products"
+ ],
+ "fields": [
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "customer_type",
+   "fieldtype": "Select",
+   "label": "Customer Type",
+   "options": "Doctor\nChemist"
+  },
+  {
+   "fieldname": "column_break_nuxx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "campaign_type",
+   "fieldtype": "Link",
+   "label": "Campaign Type",
+   "options": "Campaign Type"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "section_break_gyno",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "Leave empty if you want to select all products",
+   "fieldname": "products",
+   "fieldtype": "Table MultiSelect",
+   "label": "Products",
+   "options": "Product"
+  },
+  {
+   "fieldname": "campaign_name",
+   "fieldtype": "Data",
+   "label": "Name"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-04-20 15:21:06.199943",
+ "modified_by": "Administrator",
+ "module": "PMA",
+ "name": "Campaign",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
