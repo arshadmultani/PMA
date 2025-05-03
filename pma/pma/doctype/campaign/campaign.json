@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{campaign_name}-{start_date}-{end_date}",
+ "autoname": "field:campaign_name",
  "creation": "2025-04-13 14:36:30.927446",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -47,25 +47,28 @@
    "fieldtype": "Section Break"
   },
   {
+   "allow_in_quick_entry": 1,
    "description": "Leave empty if you want to select all products",
    "fieldname": "products",
    "fieldtype": "Table MultiSelect",
+   "in_standard_filter": 1,
    "label": "Products",
-   "options": "Product"
+   "options": "Brand"
   },
   {
    "fieldname": "campaign_name",
    "fieldtype": "Data",
-   "label": "Name"
+   "label": "Name",
+   "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-04-20 15:21:06.199943",
+ "modified": "2025-04-21 12:15:48.720996",
  "modified_by": "Administrator",
  "module": "PMA",
  "name": "Campaign",
- "naming_rule": "Expression",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
